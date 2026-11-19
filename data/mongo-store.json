@@ -1,0 +1,481 @@
+{
+  "projects": [
+    {
+      "slug": "kanke-anchal-land-mutation",
+      "title": "Kanke Anchal Multi-Plot Dakhil-Kharij & Register-II Update",
+      "titleHi": "कांके अंचल बहु-प्लॉट दाखिल-खारिज एवं रजिस्टर-II अद्यतन",
+      "category": "Land & Anchal",
+      "clientSector": "Residential Landowners · Kanke Mauza",
+      "location": "Kanke Circle, Ranchi",
+      "turnaround": "18 Days End-to-End",
+      "year": "2026",
+      "summary": "Compiled chain deeds, verified seller Lagan Rasid continuity, drafted mutation affidavits, and coordinated Halka Karamchari inspection for 6 adjacent residential plots.",
+      "outcomeMetric": "100% Register-II Approval",
+      "deliverables": [
+        "Chain Deed Scrutiny & MVR Audit",
+        "Jharbhoomi Online Mutation Filing",
+        "Up-to-Date Online Lagan Rasid Issuance",
+        "Digital Correction Slip Archive"
+      ],
+      "tags": [
+        "Dakhil-Kharij",
+        "Jharbhoomi",
+        "Register-II"
+      ],
+      "featured": true,
+      "visualTheme": "navy",
+      "createdAt": "2026-08-14T10:00:00.000Z",
+      "updatedAt": "2026-09-01T11:30:00.000Z",
+      "_id": "6afdb87e60cd8bbc6179a64c"
+    },
+    {
+      "slug": "argora-sale-deed-registry",
+      "title": "Argora Commercial Sale Deed Drafting & e-Stamp Execution",
+      "titleHi": "अरगोड़ा कमर्शियल सेल डीड ड्राफ्टिंग एवं ई-स्टाम्प निष्पादन",
+      "category": "Registry & Legal",
+      "clientSector": "Real Estate & Advocates · Argora",
+      "location": "Ranchi District Registry Office",
+      "turnaround": "48 Hours",
+      "year": "2026",
+      "summary": "Prepared bilingual sale deed schedule, calculated Jharkhand MVR stamp duty exemptions, generated e-Stamp challans, and completed Non-Encumbrance search.",
+      "outcomeMetric": "Zero Query Registry Clearance",
+      "deliverables": [
+        "Bilingual Sale Deed Schedule",
+        "MVR Valuation & Stamp Duty Sheet",
+        "13-Year EC & Registry Search"
+      ],
+      "tags": [
+        "Sale Deed",
+        "e-Stamp",
+        "EC Search"
+      ],
+      "featured": false,
+      "visualTheme": "amber",
+      "createdAt": "2026-09-10T09:15:00.000Z",
+      "updatedAt": "2026-09-12T16:20:00.000Z",
+      "_id": "6afdb87e60cd8bbc6179a64d"
+    },
+    {
+      "slug": "ekalyan-jharsewa-batch-drive",
+      "title": "e-Kalyan Scholarship & JharSewa Certificate Verification Batch",
+      "titleHi": "ई-कल्याण छात्रवृत्ति एवं झारसेवा प्रमाण पत्र सत्यापन बैच",
+      "category": "JharSewa Certificates",
+      "clientSector": "College Students · Ranchi University",
+      "location": "Sadar & Bariatu Circle",
+      "turnaround": "7–10 Working Days",
+      "year": "2026",
+      "summary": "Standardized Income, Caste, and Local Residential certificate bundles with verified Khatiyan enclosures for 140+ post-matric scholarship applicants.",
+      "outcomeMetric": "140+ Validated Scholarship Filings",
+      "deliverables": [
+        "CO-Level Income, Caste & Residential Certs",
+        "e-Kalyan Portal Document Stitching",
+        "Bonafide & Bank NPCI Status Check"
+      ],
+      "tags": [
+        "JharSewa",
+        "e-Kalyan",
+        "Certificates"
+      ],
+      "featured": false,
+      "visualTheme": "emerald",
+      "createdAt": "2026-10-02T08:00:00.000Z",
+      "updatedAt": "2026-10-12T12:00:00.000Z",
+      "_id": "6afdb87e60cd8bbc6179a64e"
+    },
+    {
+      "slug": "ranchi-msme-gst-compliance",
+      "title": "MSME Udyam, Ranchi Municipal Trade Licence & GST Setup",
+      "titleHi": "एमएसएमई उद्यम, नगर निगम ट्रेड लाइसेंस एवं जीएसटी सेटअप",
+      "category": "Business & GST",
+      "clientSector": "Retail & Pharma Distributors · Radium Road",
+      "location": "Ranchi Municipal Corporation",
+      "turnaround": "3–5 Days",
+      "year": "2026",
+      "summary": "Delivered turnkey compliance setup combining Udyam registration, Ranchi Municipal Trade Licence, FSSAI hygiene filing, and GST portal activation.",
+      "outcomeMetric": "35+ Local Businesses Onboarded",
+      "deliverables": [
+        "GSTIN & HSN Mapping",
+        "Ranchi Municipal Trade Licence",
+        "Udyam Certificate & Bank Loan CMA Report"
+      ],
+      "tags": [
+        "GST",
+        "Udyam",
+        "Trade Licence"
+      ],
+      "featured": false,
+      "visualTheme": "slate",
+      "createdAt": "2026-10-18T11:20:00.000Z",
+      "updatedAt": "2026-10-22T15:40:00.000Z",
+      "_id": "6afdb87e60cd8bbc6179a64f"
+    },
+    {
+      "slug": "dto-commercial-noc-transfer",
+      "title": "Inter-State DTO RC Ownership Transfer & Hypothecation Removal",
+      "titleHi": "अंतर-राज्यीय डीटीओ आरसी ट्रांसफर एवं हाइपोथिकेशन समाप्ति",
+      "category": "DTO & Transport",
+      "clientSector": "Fleet & Personal Vehicle Owners",
+      "location": "Ranchi DTO Office, Kutchery",
+      "turnaround": "5 Working Days",
+      "year": "2026",
+      "summary": "Processed Forms 29, 30, and 35 with bank NOCs, Parivahan tax clearance, and smart-card RC dispatch tracking.",
+      "outcomeMetric": "99.1% First-Pass DTO Approval",
+      "deliverables": [
+        "Form 29/30 & Form 35 Filing",
+        "Inter-State NOC & Road Tax Audit",
+        "HSRP & Insurance Compliance Check"
+      ],
+      "tags": [
+        "DTO Ranchi",
+        "RC Transfer",
+        "NOC"
+      ],
+      "featured": false,
+      "visualTheme": "navy",
+      "createdAt": "2026-10-28T10:10:00.000Z",
+      "updatedAt": "2026-11-01T14:00:00.000Z",
+      "_id": "6afdb87e60cd8bbc6179a650"
+    },
+    {
+      "slug": "pragya-digital-seo-portals",
+      "title": "Local Service Portfolio & WhatsApp Lead Capture Websites",
+      "titleHi": "स्थानीय सेवा पोर्टफोलियो एवं व्हाट्सएप लीड वेबसाइट",
+      "category": "Digital & Web",
+      "clientSector": "Advocates, Clinics & Consultants · Ranchi",
+      "location": "Ranchi District",
+      "turnaround": "5 Days",
+      "year": "2026",
+      "summary": "Designed responsive HTML/Tailwind service portfolios with structured Schema.org local SEO, MongoDB inquiry persistence, and instant WhatsApp routing.",
+      "outcomeMetric": "3.4x Local Map & Inquiry Lift",
+      "deliverables": [
+        "Responsive UI + Tailwind CSS Architecture",
+        "MongoDB Project & Inquiry Persistence",
+        "Google Business Profile & Schema SEO"
+      ],
+      "tags": [
+        "Portfolio Web",
+        "MongoDB",
+        "Local SEO"
+      ],
+      "featured": false,
+      "visualTheme": "amber",
+      "createdAt": "2026-11-03T09:00:00.000Z",
+      "updatedAt": "2026-11-10T17:15:00.000Z",
+      "_id": "6afdb87e60cd8bbc6179a651"
+    }
+  ],
+  "inquiries": [
+    {
+      "ticketId": "PK-RNC-1001",
+      "name": "Rajesh Kumar Mahto",
+      "phone": "9835122410",
+      "email": "rajesh.mahto@example.in",
+      "serviceSlug": "land-mutation",
+      "serviceName": "Land mutation (Dakhil-Kharij)",
+      "projectRef": "kanke-anchal-land-mutation",
+      "locationDetails": "Plot 412, Khata 45, Kanke Anchal",
+      "message": "Need Dakhil-Kharij verification for recently registered sale deed.",
+      "statusStage": 2,
+      "stageHistory": [
+        {
+          "stage": 0,
+          "label": "Accepted",
+          "at": "2026-11-15T10:30:00.000Z"
+        },
+        {
+          "stage": 1,
+          "label": "Processing",
+          "at": "2026-11-15T12:15:00.000Z"
+        },
+        {
+          "stage": 2,
+          "label": "Verified Document",
+          "at": "2026-11-16T15:40:00.000Z"
+        }
+      ],
+      "closedAt": null,
+      "operatorNote": "Sale deed and Lagan Rasid verified; awaiting portal fee confirmation.",
+      "assignedTo": "EMP-01 (Suresh Kr. Verma)",
+      "attachedDocs": [
+        {
+          "attachmentId": "6afdb87e60cd8bbc6179a649",
+          "requirementKey": "sl",
+          "requirementLabel": "Registered sale deed",
+          "name": "Sale_Deed_412.pdf",
+          "mimeType": "application/pdf",
+          "sizeBytes": 628,
+          "size": "0.6 KB",
+          "category": "Registered sale deed"
+        }
+      ],
+      "createdAt": "2026-11-15T10:30:00.000Z",
+      "updatedAt": "2026-11-16T15:40:00.000Z",
+      "_id": "6afdb87e60cd8bbc6179a652"
+    },
+    {
+      "ticketId": "PK-RNC-1002",
+      "name": "Suchita Kumari",
+      "phone": "9123456780",
+      "email": "suchita.ranchi@example.in",
+      "serviceSlug": "maiya-samman",
+      "serviceName": "Mukhyamantri Maiya Samman Yojana application",
+      "projectRef": "ekalyan-jharsewa-batch-drive",
+      "locationDetails": "Sadar Anchal · Ward 18",
+      "message": "Submitted passbook and residential proof for acknowledgment receipt.",
+      "statusStage": 4,
+      "stageHistory": [
+        {
+          "stage": 0,
+          "label": "Accepted",
+          "at": "2026-11-14T11:15:00.000Z"
+        },
+        {
+          "stage": 1,
+          "label": "Processing",
+          "at": "2026-11-14T13:00:00.000Z"
+        },
+        {
+          "stage": 2,
+          "label": "Verified Document",
+          "at": "2026-11-14T16:30:00.000Z"
+        },
+        {
+          "stage": 3,
+          "label": "Verified Payment",
+          "at": "2026-11-15T10:00:00.000Z"
+        },
+        {
+          "stage": 4,
+          "label": "Closed",
+          "at": "2026-11-16T17:15:00.000Z"
+        }
+      ],
+      "closedAt": "2026-11-16T17:15:00.000Z",
+      "operatorNote": "Application closed and acknowledgement handed over at Kutchery counter.",
+      "assignedTo": "EMP-03 (Priya Kumari)",
+      "attachedDocs": [
+        {
+          "attachmentId": "6afdb87e60cd8bbc6179a64a",
+          "requirementKey": "bp",
+          "requirementLabel": "Bank passbook",
+          "name": "Bank_Passbook_Scan.pdf",
+          "mimeType": "application/pdf",
+          "sizeBytes": 628,
+          "size": "0.6 KB",
+          "category": "Bank passbook"
+        }
+      ],
+      "createdAt": "2026-11-14T11:15:00.000Z",
+      "updatedAt": "2026-11-16T17:15:00.000Z",
+      "_id": "6afdb87e60cd8bbc6179a653"
+    },
+    {
+      "ticketId": "PK-RNC-1003",
+      "name": "Mahendra Oraon",
+      "phone": "9934112233",
+      "email": "mahendra.oraon@example.in",
+      "serviceSlug": "sale-deed-drafting",
+      "serviceName": "Sale deed drafting & registry support",
+      "projectRef": "argora-sale-deed-registry",
+      "locationDetails": "Argora Mauza · 4.5 Dismil",
+      "message": "Urgent schedule drafting and MVR stamp duty calculation.",
+      "statusStage": 1,
+      "stageHistory": [
+        {
+          "stage": 0,
+          "label": "Accepted",
+          "at": "2026-11-16T09:45:00.000Z"
+        },
+        {
+          "stage": 1,
+          "label": "Processing",
+          "at": "2026-11-17T09:50:00.000Z"
+        }
+      ],
+      "closedAt": null,
+      "operatorNote": "Draft schedule in progress at Registry Desk.",
+      "assignedTo": "EMP-02 (Deepak Kr. Choudhary)",
+      "attachedDocs": [
+        {
+          "attachmentId": "6afdb87e60cd8bbc6179a64b",
+          "requirementKey": "sl",
+          "requirementLabel": "Registered sale deed",
+          "name": "Chain_Deed_Argora.pdf",
+          "mimeType": "application/pdf",
+          "sizeBytes": 628,
+          "size": "0.6 KB",
+          "category": "Registered sale deed"
+        }
+      ],
+      "createdAt": "2026-11-16T09:45:00.000Z",
+      "updatedAt": "2026-11-17T09:50:00.000Z",
+      "_id": "6afdb87e60cd8bbc6179a654"
+    }
+  ],
+  "attachments": [
+    {
+      "_id": "6afdb87e60cd8bbc6179a649",
+      "ticketId": "PK-RNC-1001",
+      "requirementKey": "sl",
+      "requirementLabel": "Registered sale deed",
+      "fileName": "Sale_Deed_412.pdf",
+      "mimeType": "application/pdf",
+      "sizeBytes": 628,
+      "category": "Registered sale deed",
+      "dataBase64": "JVBERi0xLjQKMSAwIG9iaiA8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4gZW5kb2JqCjIgMCBvYmogPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFszIDAgUl0gL0NvdW50IDEgPj4gZW5kb2JqCjMgMCBvYmogPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCA1OTUgODQyXSAvQ29udGVudHMgNCAwIFIgL1Jlc291cmNlcyA8PCAvRm9udCA8PCAvRjEgNSAwIFIgPj4gPj4gPj4gZW5kb2JqCjQgMCBvYmogPDwgL0xlbmd0aCA5NiA+PiBzdHJlYW0KQlQgL0YxIDE0IFRmIDUwIDc2MCBUZCAoUHJhZ3lhIEtlbmRyYSBSYW5jaGkgLSBWZXJpZmllZCBDbGllbnQgRG9jdW1lbnQgU2FtcGxlKSBUaiBFVAplbmRzdHJlYW0gZW5kb2JqCjUgMCBvYmogPDwgL1R5cGUgL0ZvbnQgL1N1YnR5cGUgL1R5cGUxIC9CYXNlRm9udCAvSGVsdmV0aWNhID4+IGVuZG9iagp4cmVmCjAgNgowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMDkgMDAwMDAgbiAKMDAwMDAwMDA1OCAwMDAwMCBuIAowMDAwMDAwMTE1IDAwMDAwIG4gCjAwMDAwMDAyNDEgMDAwMDAgbiAKMDAwMDAwMDM4NyAwMDAwMCBuIAp0cmFpbGVyIDw8IC9TaXplIDYgL1Jvb3QgMSAwIFIgPj4Kc3RhcnR4cmVmCjQ1NQolJUVPRg==",
+      "uploadedAt": "2026-11-15T10:30:00.000Z"
+    },
+    {
+      "_id": "6afdb87e60cd8bbc6179a64a",
+      "ticketId": "PK-RNC-1002",
+      "requirementKey": "bp",
+      "requirementLabel": "Bank passbook",
+      "fileName": "Bank_Passbook_Scan.pdf",
+      "mimeType": "application/pdf",
+      "sizeBytes": 628,
+      "category": "Bank passbook",
+      "dataBase64": "JVBERi0xLjQKMSAwIG9iaiA8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4gZW5kb2JqCjIgMCBvYmogPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFszIDAgUl0gL0NvdW50IDEgPj4gZW5kb2JqCjMgMCBvYmogPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCA1OTUgODQyXSAvQ29udGVudHMgNCAwIFIgL1Jlc291cmNlcyA8PCAvRm9udCA8PCAvRjEgNSAwIFIgPj4gPj4gPj4gZW5kb2JqCjQgMCBvYmogPDwgL0xlbmd0aCA5NiA+PiBzdHJlYW0KQlQgL0YxIDE0IFRmIDUwIDc2MCBUZCAoUHJhZ3lhIEtlbmRyYSBSYW5jaGkgLSBWZXJpZmllZCBDbGllbnQgRG9jdW1lbnQgU2FtcGxlKSBUaiBFVAplbmRzdHJlYW0gZW5kb2JqCjUgMCBvYmogPDwgL1R5cGUgL0ZvbnQgL1N1YnR5cGUgL1R5cGUxIC9CYXNlRm9udCAvSGVsdmV0aWNhID4+IGVuZG9iagp4cmVmCjAgNgowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMDkgMDAwMDAgbiAKMDAwMDAwMDA1OCAwMDAwMCBuIAowMDAwMDAwMTE1IDAwMDAwIG4gCjAwMDAwMDAyNDEgMDAwMDAgbiAKMDAwMDAwMDM4NyAwMDAwMCBuIAp0cmFpbGVyIDw8IC9TaXplIDYgL1Jvb3QgMSAwIFIgPj4Kc3RhcnR4cmVmCjQ1NQolJUVPRg==",
+      "uploadedAt": "2026-11-14T11:15:00.000Z"
+    },
+    {
+      "_id": "6afdb87e60cd8bbc6179a64b",
+      "ticketId": "PK-RNC-1003",
+      "requirementKey": "sl",
+      "requirementLabel": "Registered sale deed",
+      "fileName": "Chain_Deed_Argora.pdf",
+      "mimeType": "application/pdf",
+      "sizeBytes": 628,
+      "category": "Registered sale deed",
+      "dataBase64": "JVBERi0xLjQKMSAwIG9iaiA8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4gZW5kb2JqCjIgMCBvYmogPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFszIDAgUl0gL0NvdW50IDEgPj4gZW5kb2JqCjMgMCBvYmogPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCA1OTUgODQyXSAvQ29udGVudHMgNCAwIFIgL1Jlc291cmNlcyA8PCAvRm9udCA8PCAvRjEgNSAwIFIgPj4gPj4gPj4gZW5kb2JqCjQgMCBvYmogPDwgL0xlbmd0aCA5NiA+PiBzdHJlYW0KQlQgL0YxIDE0IFRmIDUwIDc2MCBUZCAoUHJhZ3lhIEtlbmRyYSBSYW5jaGkgLSBWZXJpZmllZCBDbGllbnQgRG9jdW1lbnQgU2FtcGxlKSBUaiBFVAplbmRzdHJlYW0gZW5kb2JqCjUgMCBvYmogPDwgL1R5cGUgL0ZvbnQgL1N1YnR5cGUgL1R5cGUxIC9CYXNlRm9udCAvSGVsdmV0aWNhID4+IGVuZG9iagp4cmVmCjAgNgowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMDkgMDAwMDAgbiAKMDAwMDAwMDA1OCAwMDAwMCBuIAowMDAwMDAwMTE1IDAwMDAwIG4gCjAwMDAwMDAyNDEgMDAwMDAgbiAKMDAwMDAwMDM4NyAwMDAwMCBuIAp0cmFpbGVyIDw8IC9TaXplIDYgL1Jvb3QgMSAwIFIgPj4Kc3RhcnR4cmVmCjQ1NQolJUVPRg==",
+      "uploadedAt": "2026-11-16T09:45:00.000Z"
+    }
+  ],
+  "employees": [
+    {
+      "empId": "EMP-01",
+      "name": "Suresh Kr. Verma",
+      "role": "Land Mutation Specialist",
+      "phone": "9835100112",
+      "shift": "09:30 AM – 06:30 PM",
+      "status": "Present",
+      "completedToday": 7,
+      "accuracy": "99.2%",
+      "_id": "6afdb87e60cd8bbc6179a655"
+    },
+    {
+      "empId": "EMP-02",
+      "name": "Deepak Kr. Choudhary",
+      "role": "Registry & Deed Draftsman",
+      "phone": "9123400221",
+      "shift": "10:00 AM – 07:00 PM",
+      "status": "Present",
+      "completedToday": 5,
+      "accuracy": "98.8%",
+      "_id": "6afdb87e60cd8bbc6179a656"
+    },
+    {
+      "empId": "EMP-03",
+      "name": "Priya Kumari",
+      "role": "JharSewa & Certificate Operator",
+      "phone": "9934100334",
+      "shift": "09:30 AM – 06:30 PM",
+      "status": "Present",
+      "completedToday": 11,
+      "accuracy": "98.5%",
+      "_id": "6afdb87e60cd8bbc6179a657"
+    },
+    {
+      "empId": "EMP-04",
+      "name": "Rakesh Mahato",
+      "role": "DTO & Commercial Licensing Desk",
+      "phone": "9431100445",
+      "shift": "11:00 AM – 08:30 PM",
+      "status": "On Break",
+      "completedToday": 4,
+      "accuracy": "97.9%",
+      "_id": "6afdb87e60cd8bbc6179a658"
+    }
+  ],
+  "ledger": [
+    {
+      "desc": "Sale Deed Drafting — PK-RNC-1003",
+      "mode": "UPI",
+      "amount": 2500,
+      "time": "10:15 AM",
+      "createdAt": "2026-11-18T04:45:00.000Z",
+      "_id": "6afdb87e60cd8bbc6179a659"
+    },
+    {
+      "desc": "Jharbhoomi Online Lagan Rasid",
+      "mode": "Cash",
+      "amount": 450,
+      "time": "10:40 AM",
+      "createdAt": "2026-11-18T05:10:00.000Z",
+      "_id": "6afdb87e60cd8bbc6179a65a"
+    },
+    {
+      "desc": "JharSewa Portal & Stamp Challan",
+      "mode": "Challan",
+      "amount": 1200,
+      "time": "11:05 AM",
+      "createdAt": "2026-11-18T05:35:00.000Z",
+      "_id": "6afdb87e60cd8bbc6179a65b"
+    }
+  ],
+  "challans": [
+    {
+      "refId": "PK-RNC-1001",
+      "category": "Jharbhoomi Lagan / Mutation Fee",
+      "amount": 650,
+      "createdAt": "2026-11-15T11:00:00.000Z",
+      "_id": "6afdb87e60cd8bbc6179a65c"
+    },
+    {
+      "refId": "PK-RNC-1001",
+      "category": "Drafting & Professional Fee",
+      "amount": 850,
+      "createdAt": "2026-11-15T11:05:00.000Z",
+      "_id": "6afdb87e60cd8bbc6179a65d"
+    },
+    {
+      "refId": "PK-RNC-1003",
+      "category": "e-Stamp / Stamp Duty",
+      "amount": 18500,
+      "createdAt": "2026-11-16T10:15:00.000Z",
+      "_id": "6afdb87e60cd8bbc6179a65e"
+    }
+  ],
+  "referrals": [
+    {
+      "partner": "Adv. Akash Tirkey",
+      "client": "Mahendra Oraon",
+      "work": "Sale Deed + Mutation (Argora)",
+      "status": "Active",
+      "credit": "₹750",
+      "createdAt": "2026-11-16T09:00:00.000Z",
+      "_id": "6afdb87e60cd8bbc6179a65f"
+    },
+    {
+      "partner": "Ranchi Property Associates",
+      "client": "Deepak Verma",
+      "work": "LPC & Khatiyan Verification",
+      "status": "Completed",
+      "credit": "₹500",
+      "createdAt": "2026-11-12T14:00:00.000Z",
+      "_id": "6afdb87e60cd8bbc6179a660"
+    },
+    {
+      "partner": "Adv. Priya Kumari",
+      "client": "Nirmala Devi",
+      "work": "Legal Heir Affidavit & Certs",
+      "status": "Active",
+      "credit": "₹400",
+      "createdAt": "2026-11-17T12:00:00.000Z",
+      "_id": "6afdb87e60cd8bbc6179a661"
+    }
+  ],
+  "queue": {
+    "nowServing": 104,
+    "nextToken": 108
+  }
+}

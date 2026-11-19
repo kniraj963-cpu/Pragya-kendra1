@@ -1,0 +1,11 @@
+# Cloudflare Pages configuration for Pragya Kendra Ranchi
+name = "pragya-kendra-ranchi"
+account_id = "686fa684d5f39a29dc84d4933a0144ce"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Set API_ORIGIN in Cloudflare Pages Dashboard -> Settings -> Variables and Secrets
+# so /functions/api/[[path]].ts proxies /api/* seamlessly to your MongoDB Express server:
+# [vars]
+# API_ORIGIN = "https://your-express-mongo-backend.example.com"

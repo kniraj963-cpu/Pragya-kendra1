@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pragya Kendra Ranchi | प्रज्ञा केंद्र रांची — Citizen & Documentation Services</title>
+  <meta name="description" content="Citizen service and documentation assistance portal for Pragya Kendra Ranchi — Beside Kolkatta Pharma, Radium Road, Kutchery Chowk, Ranchi (Adjacent to Gayatri Medical Hall). Jharbhoomi Mutation, Registry, JharSewa Certificates, PAN, Passport & Legal Affidavits." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans Devanagari', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            civic: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              600: '#4f46e5',
+              700: '#4338ca',
+              800: '#3730a3',
+              900: '#1e1b4b',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', 'Noto Sans Devanagari', system-ui, sans-serif; }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    @media print {
+      body * { visibility: hidden; }
+      #print-slip-area, #print-slip-area * { visibility: visible; }
+      #print-slip-area {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: white !important;
+        color: black !important;
+        padding: 24px;
+        z-index: 9999;
+      }
+      .no-print { display: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-600 selection:text-white">
+
+  <div id="toast-container" class="fixed bottom-4 right-4 z-50 flex flex-col gap-2 max-w-sm w-full pointer-events-none px-4 sm:px-0"></div>
+
+  <!-- Top Civic Bar -->
+  <div class="bg-slate-900 text-slate-200 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 text-emerald-400 font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span data-i18n="top_status">CSC / Pragya Kendra Active • Kutchery Chowk, Ranchi</span>
+        </span>
+        <span class="hidden md:inline text-slate-500">|</span>
+        <span class="hidden md:inline text-slate-300" data-i18n="top_landmark">Beside Kolkatta Pharma, Radium Road (Adj. Gayatri Medical Hall)</span>
+      </div>
+      <div class="flex items-center gap-3 flex-wrap">
+        <span id="db-sync-badge" class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[11px]">
+          <i data-lucide="database" class="w-3 h-3 text-emerald-400"></i>
+          <span id="db-mode-label">MongoDB Atlas • API</span>
+        </span>
+        <button id="citizen-nav-btn" onclick="openCitizenModal()" class="inline-flex items-center gap-1 text-sky-300 hover:text-sky-200 font-semibold transition">
+          <i data-lucide="user-check" class="w-3.5 h-3.5"></i>
+          <span id="citizen-nav-label">Citizen Login</span>
+        </button>
+        <button onclick="openStaffModal()" class="inline-flex items-center gap-1 text-amber-300 hover:text-amber-200 font-semibold transition">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+          <span id="staff-nav-label" data-i18n="nav_staff">Admin / Staff Login</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Navigation Header -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <a href="#top" class="flex items-center gap-3 group shrink-0">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-700 via-indigo-600 to-emerald-600 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition">
+          <i data-lucide="landmark" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="font-extrabold text-slate-900 text-base sm:text-lg tracking-tight" data-i18n="brand_title">Pragya Kendra Ranchi</span>
+            <span class="hidden sm:inline-block text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200">CSC</span>
+          </div>
+          <p class="text-[11px] text-slate-500 leading-tight" data-i18n="brand_subtitle">Radium Road • Kutchery Chowk, Ranchi</p>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-600">
+        <a href="#services" class="hover:text-indigo-600 transition" data-i18n="nav_services">146+ Services</a>
+        <a href="#track-status" class="hover:text-indigo-600 transition" data-i18n="nav_track">Track Status</a>
+        <a href="#tools" class="hover:text-indigo-600 transition" data-i18n="nav_tools">Ranchi Land & Fee Tools</a>
+        <a href="#location" class="hover:text-indigo-600 transition" data-i18n="nav_location">Location & FAQ</a>
+      </nav>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button id="lang-toggle-btn" onclick="toggleLanguage()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-300 bg-slate-50 hover:bg-slate-100 text-slate-800 text-xs sm:text-sm font-semibold transition shadow-sm">
+          <i data-lucide="languages" class="w-4 h-4 text-indigo-600"></i>
+          <span id="lang-label">हिंदी में देखें</span>
+        </button>
+
+        <button onclick="openApplyModal(1)" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold shadow-sm transition">
+          <i data-lucide="file-plus-2" class="w-4 h-4"></i>
+          <span data-i18n="nav_cta">Apply Now</span>
+        </button>
+
+        <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100" aria-label="Toggle Menu">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2 shadow-lg">
+      <a href="#services" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-indigo-50 hover:text-indigo-600" data-i18n="nav_services">146+ Services</a>
+      <a href="#track-status" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-indigo-50 hover:text-indigo-600" data-i18n="nav_track">Track Status</a>
+      <a href="#tools" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-indigo-50 hover:text-indigo-600" data-i18n="nav_tools">Ranchi Land & Fee Tools</a>
+      <a href="#location" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-indigo-50 hover:text-indigo-600" data-i18n="nav_location">Location & FAQ</a>
+      <div class="pt-2 border-t border-slate-100 flex flex-wrap gap-2">
+        <button onclick="toggleMobileMenu(); openApplyModal(1)" class="flex-1 py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-semibold text-center">Apply Now (PDFs)</button>
+        <button onclick="toggleMobileMenu(); openCitizenModal()" class="px-3.5 py-2.5 rounded-xl bg-sky-700 text-white text-sm font-semibold">Citizen Login</button>
+        <button onclick="toggleMobileMenu(); openStaffModal()" class="px-3.5 py-2.5 rounded-xl bg-slate-900 text-amber-300 text-sm font-semibold">Staff Login</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="top" class="relative overflow-hidden bg-gradient-to-b from-indigo-950 via-slate-900 to-slate-900 text-white py-12 sm:py-16">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#818cf8_1px,transparent_1px)] [background-size:20px_20px]"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="max-w-3xl mx-auto space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-indigo-200 text-xs font-medium">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-400"></i>
+          <span data-i18n="hero_badge">Citizen Service & Documentation Assistance • Kutchery & Registry Hub</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+          <span data-i18n="hero_title_1">Fast, Verified Citizen &</span>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-sky-300 to-emerald-300" data-i18n="hero_title_2">Legal Services in Ranchi</span>
+        </h1>
+
+        <p class="text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed" data-i18n="hero_desc">
+          Send an online service request, upload supporting PDFs, pay only after the centre confirms the charge, and track your application securely—beside Kolkatta Pharma on Radium Road, Kutchery Chowk.
+        </p>
+
+        <!-- Quick Search / Best Service Finder -->
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-2 rounded-2xl max-w-2xl mx-auto shadow-2xl">
+          <div class="flex flex-col sm:flex-row gap-2">
+            <div class="relative flex-1">
+              <i data-lucide="search" class="w-4 h-4 text-slate-300 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+              <input id="hero-search-input" type="text" oninput="handleHeroSearch(this.value)"
+                placeholder="Search mutation, lagaan, registry, caste/income, PAN, passport..."
+                class="w-full pl-10 pr-4 py-3 rounded-xl bg-white text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+            </div>
+            <button onclick="applyBestFromSearch()" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition shrink-0">
+              <i data-lucide="wand-2" class="w-4 h-4"></i>
+              <span data-i18n="hero_find_btn">Best Service & Apply</span>
+            </button>
+          </div>
+          <div id="hero-search-results" class="hidden mt-2 text-left bg-slate-950/90 border border-slate-800 rounded-xl divide-y divide-slate-800 max-h-60 overflow-y-auto"></div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-3 pt-1 text-xs text-slate-300">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10">
+            <i data-lucide="file-check-2" class="w-3.5 h-3.5 text-emerald-400"></i>
+            <span data-i18n="badge_strict_pdf">Strict .PDF Per Checklist Item</span>
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10">
+            <i data-lucide="qr-code" class="w-3.5 h-3.5 text-sky-400"></i>
+            <span data-i18n="badge_upi">UPI QR & UTR Verification</span>
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10">
+            <i data-lucide="shield-x" class="w-3.5 h-3.5 text-amber-400"></i>
+            <span data-i18n="badge_no_aadhaar">No Aadhaar Enrollment / Update</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Catalog Section -->
+  <section id="services" class="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-indigo-600" data-i18n="sec_services_tag">Citizen & Legal Catalog</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1" data-i18n="sec_services_title">Services with Auto-Applied Best Package</h2>
+        <p class="text-slate-600 text-sm mt-1" data-i18n="sec_services_sub">Every service includes its recommended Best Service package and required PDF checklist. Click Apply Now to upload PDFs and submit.</p>
+      </div>
+
+      <div id="category-tabs" class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1"></div>
+    </div>
+
+    <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+  </section>
+
+  <!-- Citizen Status Tracker Section -->
+  <section id="track-status" class="py-12 bg-white border-y border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600" data-i18n="track_tag">Real-Time Application Tracker</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1" data-i18n="track_title">Track Your Application or Re-Upload Flagged PDFs</h2>
+        <p class="text-slate-600 text-sm mt-1" data-i18n="track_sub">Enter your reference token and the registered 10-digit mobile number to check progress or re-upload a flagged PDF.</p>
+      </div>
+
+      <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-6 shadow-sm">
+        <form onsubmit="handleStatusLookup(event)" class="flex flex-col sm:flex-row gap-3">
+          <input id="status-lookup-input" type="text" required
+            placeholder="Application token (PKR-2026-...)"
+            class="flex-1 px-4 py-3 rounded-xl border border-slate-300 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+          <input id="status-phone-input" type="tel" inputmode="numeric" maxlength="10" pattern="[6-9][0-9]{9}" required
+            placeholder="Registered 10-digit mobile"
+            class="flex-1 px-4 py-3 rounded-xl border border-slate-300 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+          <button type="submit" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm transition">
+            <i data-lucide="search-check" class="w-4 h-4"></i>
+            <span data-i18n="track_btn">Check Status</span>
+          </button>
+        </form>
+
+        <div id="status-lookup-result" class="mt-6 space-y-4"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ranchi Land & Registry Smart Tools -->
+  <section id="tools" class="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-8">
+      <span class="text-xs font-bold uppercase tracking-wider text-indigo-600" data-i18n="tools_tag">Ranchi & Jharkhand Calculators</span>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1" data-i18n="tools_title">Land Area Converter & Registry Stamp Estimator</h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- Land Converter -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2.5">
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center border border-emerald-200">
+              <i data-lucide="ruler" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 text-lg" data-i18n="land_calc_title">Ranchi Land Area Converter</h3>
+              <p class="text-xs text-slate-500">Chotanagpur standard: 1 Katha = 720 sq.ft ≈ 1.653 Decimal</p>
+            </div>
+          </div>
+          <button onclick="openApplyModal(1)" class="text-xs font-semibold text-indigo-600 hover:underline">Apply Mutation →</button>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Input Value</label>
+            <input id="land-input-val" type="number" step="any" min="0" value="2" oninput="calculateLandArea()"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Unit</label>
+            <select id="land-input-unit" onchange="calculateLandArea()"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+              <option value="katha" selected>Katha (कट्ठा - 720 sq.ft)</option>
+              <option value="decimal">Decimal (डिसमिल - 435.6 sq.ft)</option>
+              <option value="sqft">Square Feet (Sq. Ft.)</option>
+              <option value="sqm">Square Meter (Sq. Meter)</option>
+              <option value="acre">Acre (एकड़ - 100 Decimal)</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="land-conversion-grid" class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-1"></div>
+      </div>
+
+      <!-- Registry Stamp Duty Estimator -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2.5">
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center border border-indigo-200">
+              <i data-lucide="calculator" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 text-lg" data-i18n="reg_calc_title">Jharkhand Registry Fee Estimator</h3>
+              <p class="text-xs text-slate-500">Illustrative sample rates only — verify the current official Jharkhand schedule before payment</p>
+            </div>
+          </div>
+          <button onclick="openApplyModal(2)" class="text-xs font-semibold text-indigo-600 hover:underline">Apply Registry →</button>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Govt. Circle Value (₹)</label>
+            <input id="reg-circle-val" type="number" min="0" step="1000" value="2500000" oninput="calculateRegistryFee()"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Agreement Value (₹)</label>
+            <input id="reg-agree-val" type="number" min="0" step="1000" value="2400000" oninput="calculateRegistryFee()"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+          </div>
+        </div>
+
+        <div id="registry-fee-output" class="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-2 text-sm"></div>
+        <p class="text-[11px] text-amber-700 bg-amber-50 border border-amber-200 rounded-lg p-2.5">
+          <strong>Note:</strong> Illustrative calculation only using the sample rates shown. This is not an official fee quote. Actual stamp duty, registration fee, exemptions and valuation depend on the latest Jharkhand rules, deed type and property details. Confirm with the Sub-Registrar before payment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & FAQ Section -->
+  <section id="location" class="py-12 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div class="lg:col-span-5 bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-4">
+        <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Visit Counter</span>
+        <h3 class="text-xl font-extrabold text-slate-900">Pragya Kendra (प्रज्ञा केंद्र)</h3>
+        <div class="space-y-2.5 text-sm text-slate-700">
+          <p class="flex items-start gap-2.5">
+            <i data-lucide="map-pin" class="w-4 h-4 text-indigo-600 shrink-0 mt-0.5"></i>
+            <span>Beside Kolkatta Pharma, Radium Road, Kutchery Chowk, Ranchi, Jharkhand 834001, India (near Gayatri Medical Hall)</span>
+          </p>
+          <p class="flex items-center gap-2.5">
+            <i data-lucide="clock" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+            <span>Please call to confirm today’s working hours</span>
+          </p>
+          <p class="flex items-center gap-2.5">
+            <i data-lucide="phone-call" class="w-4 h-4 text-indigo-600 shrink-0"></i>
+            <a href="tel:+919065233139" class="hover:text-indigo-700">+91 90652 33139</a>
+          </p>
+        </div>
+        <div class="pt-2 flex flex-wrap gap-2">
+          <a href="https://maps.google.com/?q=Kutchery+Chowk+Radium+Road+Ranchi" target="_blank" rel="noopener"
+            class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 transition">
+            <i data-lucide="navigation" class="w-3.5 h-3.5"></i> Open in Google Maps
+          </a>
+          <button onclick="openApplyModal(1)" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-indigo-600 text-white text-xs font-semibold hover:bg-indigo-700 transition">
+            <i data-lucide="file-plus-2" class="w-3.5 h-3.5"></i> Apply Now
+          </button>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 space-y-3">
+        <h3 class="text-xl font-extrabold text-slate-900 mb-2">Frequently Asked Questions</h3>
+        <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/60">
+          <p class="font-bold text-sm text-slate-900">Why does every checklist item require a separate .PDF file?</p>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">Uploading one clean .PDF per required checklist item (verified with %PDF signature checks and preview) speeds up verification at Kutchery Chowk and prevents missing pages on Jharbhoomi, Registry, and JharSewa filings.</p>
+        </div>
+        <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/60">
+          <p class="font-bold text-sm text-slate-900">How does online UPI QR payment & UTR verification work?</p>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">Scan the UPI QR only after the centre confirms the payable amount. Enter the transaction reference if a fee is due; staff manually verify the reference before treating payment as confirmed.</p>
+        </div>
+        <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/60">
+          <p class="font-bold text-sm text-slate-900">Are Aadhaar enrollment or update services available here?</p>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">No. Aadhaar enrollment and update services are strictly excluded from Pragya Kendra Ranchi workflows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="bg-slate-950 text-slate-300 px-4 py-6 text-center text-xs space-y-2">
+    <p class="font-semibold text-white">Pragya Kendra Ranchi • Beside Kolkatta Pharma, Radium Road, Kutchery Chowk, Ranchi, Jharkhand 834001</p>
+    <p>Independent citizen-service assistance centre. This website is not a government website. Government approvals, fees, eligibility and timelines are determined by the relevant department.</p>
+    <p>Call <a class="text-sky-300 underline" href="tel:+919065233139">+91 90652 33139</a> • UPI: <span class="font-mono text-emerald-300">niraj2392130@naviaxis</span></p>
+  </div>
+
+  <!-- APPLY NOW MODAL (Strict Per-Item PDF Upload + Best Service + UPI QR) -->
+  <div id="apply-modal" class="fixed inset-0 z-50 hidden bg-slate-950/70 backdrop-blur-sm overflow-y-auto p-4 sm:p-6">
+    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden my-6">
+      <div class="bg-gradient-to-r from-indigo-900 via-indigo-800 to-slate-900 text-white px-6 py-4 flex items-center justify-between">
+        <div>
+          <span class="text-[11px] uppercase tracking-wider font-bold text-indigo-200">Pragya Kendra • Online Application</span>
+          <h3 class="text-lg sm:text-xl font-extrabold">Apply Now — Best Service & PDF Checklist</h3>
+        </div>
+        <button onclick="closeApplyModal()" class="p-2 rounded-xl bg-white/10 hover:bg-white/20 transition" aria-label="Close">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <form id="application-form" onsubmit="handleApplicationSubmit(event)" class="p-6 space-y-6">
+        <!-- Service & Auto-Applied Best Service Package -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">1. Select Service *</label>
+            <select id="apply-service-select" onchange="onServiceChange(this.value)"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-sm font-semibold text-slate-900 focus:ring-2 focus:ring-indigo-500 focus:outline-none"></select>
+          </div>
+
+          <div id="best-service-card" class="bg-emerald-50 border border-emerald-200 rounded-xl p-3.5 flex flex-col justify-between">
+            <div class="flex items-center justify-between gap-2">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-800 flex items-center gap-1">
+                <i data-lucide="award" class="w-3.5 h-3.5"></i> Service Support Package
+              </span>
+              <span class="text-[10px] text-emerald-800">Centre assistance charge</span><span id="best-service-fee" class="text-sm font-extrabold text-emerald-900">Confirm at counter</span>
+            </div>
+            <p id="apply-service-category" class="text-[11px] font-bold uppercase tracking-wide text-indigo-700 mb-1"></p>
+                <p id="best-service-name" class="font-bold text-slate-900 text-sm mt-1"></p>
+            <p id="best-service-desc" class="text-xs text-slate-600 mt-0.5"></p>
+          </div>
+        </div>
+
+        <!-- Applicant Details -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Applicant Full Name *</label>
+            <input id="app-name" type="text" required placeholder="e.g. Rajesh Kumar Verma"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">10-Digit Mobile Number *</label>
+            <input id="app-phone" type="tel" required pattern="[6-9][0-9]{9}" maxlength="10" placeholder="10-digit mobile number"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Anchal / Circle / Locality (Optional)</label>
+            <input id="app-anchal" type="text" placeholder="e.g. Town Anchal / Argora / Kanke"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+          </div>
+        </div>
+
+        <!-- Strict Per-Item PDF Checklist -->
+        <div class="border border-slate-200 rounded-2xl p-4 sm:p-5 bg-slate-50/70 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm sm:text-base flex items-center gap-2">
+                <i data-lucide="file-check" class="w-4 h-4 text-indigo-600"></i>
+                Required Document Checklist (Strict .PDF Per Item)
+              </h4>
+              <p class="text-xs text-slate-500">Every item requires a valid .PDF file (%PDF header, max 10 MB). Preview before submitting.</p>
+            </div>
+            <div class="text-right">
+              <span id="pdf-readiness-counter" class="text-xs font-extrabold text-indigo-700">0 / 0 PDFs Ready</span>
+              <div class="w-36 h-2 bg-slate-200 rounded-full overflow-hidden mt-1">
+                <div id="pdf-readiness-bar" class="h-full bg-emerald-500 transition-all duration-300" style="width: 0%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div id="checklist-pdf-slots" class="space-y-3"></div>
+          <p class="text-[11px] text-slate-500">Privacy: uploaded documents are sent to the centre’s secured application backend and stored in its MongoDB document storage. Upload only documents needed for this request.</p>
+          <div id="pdf-validation-alert" class="hidden text-xs font-semibold text-rose-700 bg-rose-50 border border-rose-200 rounded-xl p-3"></div>
+        </div>
+
+        <!-- Online UPI QR Payment & UTR -->
+        <div class="border border-indigo-200 bg-indigo-50/40 rounded-2xl p-4 sm:p-5">
+          <h4 class="font-bold text-slate-900 text-sm sm:text-base flex items-center gap-2 mb-3">
+            <i data-lucide="qr-code" class="w-4 h-4 text-indigo-600"></i>
+            UPI QR Payment & Manual UTR Review
+          </h4>
+
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-5 items-center">
+            <div class="md:col-span-4 flex flex-col items-center bg-white border border-slate-200 rounded-xl p-3 text-center">
+              <img id="upi-qr-img" alt="UPI Payment QR Code" class="w-36 h-36 rounded-lg border border-slate-100" />
+              <p class="text-[11px] font-bold text-slate-800 mt-2" id="upi-payee-label">PRAGYA KENDRA RANCHI</p>
+              <p class="text-[11px] text-indigo-700 font-mono" id="upi-id-text">niraj2392130@naviaxis</p>
+              <button type="button" onclick="copyUpiId()" class="mt-2 inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-semibold transition">
+                <i data-lucide="copy" class="w-3 h-3"></i> Copy UPI ID
+              </button>
+            </div>
+
+            <div class="md:col-span-8 space-y-3">
+              <div class="bg-white border border-slate-200 rounded-xl p-3 flex items-center justify-between">
+                <span class="text-xs font-semibold text-slate-600">Indicative Centre Assistance Charge:</span>
+                <span id="upi-amount-display" class="text-lg font-extrabold text-indigo-700">₹0</span>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">UPI UTR / Transaction Reference (required only when a fee is displayed)</label>
+                <input id="app-utr" type="text" pattern="[A-Za-z0-9]{8,22}" placeholder="Enter UTR after payment, if a fee is displayed"
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-sm font-mono focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+              </div>
+
+              <p class="text-[11px] text-slate-500">If a fee is shown, pay only that amount and enter the UTR. If the fee says “Confirm at counter”, contact the centre first. UTR details are manually checked by staff; QR scanning does not itself confirm payment.</p>
+            </div>
+          </div>
+        </div>
+
+        <label class="flex items-start gap-2 text-xs text-slate-600 bg-slate-50 border border-slate-200 rounded-xl p-3"><input id="application-consent" type="checkbox" required class="mt-0.5" /><span>I confirm that I am submitting these documents for the selected service and consent to Pragya Kendra storing them securely for application processing and follow-up. I understand this is an assistance centre, not a government department.</span></label>
+
+        <div class="flex flex-col sm:flex-row items-center justify-end gap-3 pt-2 border-t border-slate-200">
+          <button type="button" onclick="closeApplyModal()" class="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-slate-300 text-slate-700 font-semibold text-sm hover:bg-slate-50">Cancel</button>
+          <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-md transition">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            Submit Application & Generate Token
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Token Receipt Modal -->
+  <div id="token-modal" class="fixed inset-0 z-50 hidden bg-slate-950/70 backdrop-blur-sm overflow-y-auto p-4 sm:p-6">
+    <div class="max-w-lg mx-auto bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden my-8">
+      <div id="print-slip-area" class="p-6 space-y-4">
+        <div class="flex items-start justify-between border-b border-slate-200 pb-3">
+          <div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700">Application Submitted</span>
+            <h3 class="text-xl font-extrabold text-slate-900">Pragya Kendra Ranchi</h3>
+            <p class="text-xs text-slate-500">Beside Kolkatta Pharma, Radium Road, Kutchery Chowk, Ranchi 834001</p>
+          </div>
+          <span id="slip-token-id" class="px-3 py-1 rounded-lg bg-indigo-50 text-indigo-700 border border-indigo-200 font-mono font-bold text-sm"></span>
+        </div>
+        <div id="slip-details" class="space-y-2 text-xs sm:text-sm text-slate-700"></div>
+      </div>
+      <div class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2 no-print">
+        <button onclick="copyTokenSummary()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-slate-300 bg-white text-slate-800 text-xs font-semibold hover:bg-slate-100">
+          <i data-lucide="copy" class="w-3.5 h-3.5"></i> Copy Summary
+        </button>
+        <div class="flex items-center gap-2">
+          <button onclick="window.print()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-800 text-white text-xs font-semibold hover:bg-slate-700">
+            <i data-lucide="printer" class="w-3.5 h-3.5"></i> Print Slip
+          </button>
+          <button onclick="closeTokenModal()" class="px-4 py-2 rounded-xl bg-indigo-600 text-white text-xs font-semibold hover:bg-indigo-700">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Citizen Login & Personal Dashboard Modal -->
+  <div id="citizen-modal" class="fixed inset-0 z-50 hidden bg-slate-950/70 backdrop-blur-sm overflow-y-auto p-4 sm:p-6">
+    <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden my-8">
+      <div class="bg-gradient-to-r from-sky-900 to-indigo-900 text-white px-6 py-4 flex items-center justify-between">
+        <div>
+          <span class="text-[11px] uppercase tracking-wider font-bold text-sky-200">Citizen Portal</span>
+          <h3 class="text-lg font-extrabold">Citizen Login & My Applications</h3>
+        </div>
+        <button onclick="closeCitizenModal()" class="p-2 rounded-xl bg-white/10 hover:bg-white/20">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div id="citizen-modal-body" class="p-6 space-y-5"></div>
+    </div>
+  </div>
+
+  <!-- Staff & Admin Console Modal -->
+  <div id="staff-modal" class="fixed inset-0 z-50 hidden bg-slate-950/75 backdrop-blur-sm overflow-y-auto p-4 sm:p-6">
+    <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden my-6">
+      <div class="bg-slate-950 text-white px-6 py-4 flex items-center justify-between">
+        <div>
+          <span class="text-[11px] uppercase tracking-wider font-bold text-amber-400">Protected Console • Kutchery Chowk</span>
+          <h3 class="text-lg sm:text-xl font-extrabold">Staff & Admin Operations Console</h3>
+        </div>
+        <button onclick="closeStaffModal()" class="p-2 rounded-xl bg-white/10 hover:bg-white/20">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div id="staff-modal-body" class="p-6 space-y-6"></div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Quick-Chat Widget -->
+  <div class="fixed bottom-5 left-5 z-40 no-print">
+    <div id="wa-panel" class="hidden mb-3 w-80 sm:w-96 bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden">
+      <div class="bg-emerald-600 text-white px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <div>
+            <p class="font-bold text-sm">WhatsApp Counter Desk</p>
+            <p class="text-[11px] text-emerald-100">Pragya Kendra • Kutchery Chowk, Ranchi</p>
+          </div>
+        </div>
+        <button onclick="toggleWhatsAppPanel()" class="p-1 rounded-lg hover:bg-white/15">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="p-4 space-y-3 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Select Counter Number</label>
+          <select id="wa-number-select" onchange="updateWaPreview()" class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-slate-50 font-semibold">
+            <option value="919065233139">Main Desk (Radium Road) — +91 90652 33139</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Quick Custom Message</label>
+          <select id="wa-template-select" onchange="applyWaTemplate()" class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white">
+            <option value="mutation">Land Mutation (दाखिल-खारिज) & Lagaan Checklist</option>
+            <option value="registry">Kutchery Registry & Deed Stamp Duty Query</option>
+            <option value="jharsewa">JharSewa Caste / Residential / Income Certificate</option>
+            <option value="status">Check My Application Status / UTR Verification</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Message Preview (Editable)</label>
+          <textarea id="wa-message-box" rows="3" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-emerald-500 focus:outline-none"></textarea>
+        </div>
+
+        <a id="wa-launch-link" href="#" target="_blank" rel="noopener"
+          class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm transition">
+          <i data-lucide="external-link" class="w-4 h-4"></i> Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <button onclick="toggleWhatsAppPanel()" class="inline-flex items-center gap-2 px-4 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-xl transition hover:scale-105">
+      <i data-lucide="message-circle" class="w-5 h-5"></i>
+      <span>WhatsApp</span>
+    </button>
+  </div>
+
+  <script>
+    const UPI_CONFIG = {
+      upiId: 'niraj2392130@naviaxis',
+      payeeName: 'PRAGYA KENDRA RANCHI'
+    };
+
+    const SERVICES = [
+      {
+        id: 1,
+        category: 'Land & Mutation',
+        titleEn: 'Jharbhoomi Land Mutation (दाखिल-खारिज)',
+        titleHi: 'झारभूमि दाखिल-खारिज (Land Mutation)',
+        descEn: 'Online mutation filing with register-II & revenue record verification for Ranchi Anchal offices.',
+        descHi: 'रांची अंचल कार्यालयों के लिए पंजी-II और राजस्व अभिलेख सत्यापन के साथ ऑनलाइन दाखिल-खारिज।',
+        bestServiceEn: 'Complete Mutation + Lagaan Check + Objection Follow-up Pack',
+        bestServiceHi: 'पूर्ण दाखिल-खारिज + लगान जांच + आपत्ति फॉलो-अप पैक',
+        bestDescEn: 'Includes document audit, portal filing, receipt generation, and status tracking.',
+        bestDescHi: 'दस्तावेज ऑडिट, पोर्टल आवेदन, रसीद और स्थिति ट्रैकिंग शामिल।',
+        fee: 450,
+        checklist: [
+          'Registered Sale / Gift Deed Copy (.PDF)',
+          'Updated Online Lagaan / Malgujari Receipt (.PDF)',
+          'Khatian / Khatiyan / Land Record Extract (.PDF)',
+          'Applicant Identity & Address Proof (.PDF)'
+        ]
+      },
+      {
+        id: 2,
+        category: 'Registry & Legal',
+        titleEn: 'Kutchery Registry & Deed Drafting',
+        titleHi: 'कचहरी रजिस्ट्री एवं डीड ड्राफ्टिंग',
+        descEn: 'Sale deed, power of attorney, agreement drafting, stamp challan guidance, and slot preparation.',
+        descHi: 'सेल डीड, मुख्तारनामा, एग्रीमेंट ड्राफ्टिंग, स्टांप चालान मार्गदर्शन एवं स्लॉट तैयारी।',
+        bestServiceEn: 'Priority Deed Review + Stamp Valuation Check + Slot Prep',
+        bestServiceHi: 'प्राथमिक डीड समीक्षा + स्टांप मूल्यांकन जांच + स्लॉट तैयारी',
+        bestDescEn: 'Pre-checks circle rate vs agreement value and required annexures before registry.',
+        bestDescHi: 'रजिस्ट्री से पूर्व सर्कल रेट बनाम एग्रीमेंट मूल्य व संलग्नकों की जांच।',
+        fee: 700,
+        checklist: [
+          'Vendor & Vendee Identity Proofs (.PDF)',
+          'Chain / Previous Title Deed & Khata-Khesra Details (.PDF)',
+          'Latest Lagaan Receipt & Non-Encumbrance / Property Details (.PDF)'
+        ]
+      },
+      {
+        id: 3,
+        category: 'Land & Mutation',
+        titleEn: 'Online Lagaan / Rent Receipt',
+        titleHi: 'ऑनलाइन लगान / मालगुजारी रसीद',
+        descEn: 'Pay land revenue online and download digitally verifiable Lagaan receipts for Ranchi holdings.',
+        descHi: 'रांची होल्डिंग के लिए ऑनलाइन भू-राजस्व भुगतान और डिजिटल लगान रसीद डाउनलोड।',
+        bestServiceEn: 'Lagaan Arrear Check + Instant Receipt Filing Pack',
+        bestServiceHi: 'लगान बकाया जांच + त्वरित रसीद आवेदन पैक',
+        bestDescEn: 'Verifies current holding details and generates official digital receipt.',
+        bestDescHi: 'वर्तमान होल्डिंग विवरण जांचकर आधिकारिक डिजिटल रसीद तैयार करना।',
+        fee: 200,
+        checklist: [
+          'Previous Lagaan Receipt or Holding Number Proof (.PDF)',
+          'Khata / Plot / Thana Details Document (.PDF)'
+        ]
+      },
+      {
+        id: 4,
+        category: 'JharSewa Certificates',
+        titleEn: 'JharSewa Caste, Income & Residential',
+        titleHi: 'झारसेवा जाति, आय एवं आवासीय प्रमाण पत्र',
+        descEn: 'Apply for Caste (जाति), Income (आय), or Residential (आवासीय) certificates via JharSewa.',
+        descHi: 'झारसेवा के माध्यम से जाति, आय या आवासीय प्रमाण पत्र के लिए आवेदन।',
+        bestServiceEn: 'JharSewa Guided Filing + Self-Declaration & Tracking Pack',
+        bestServiceHi: 'झारसेवा मार्गदर्शित आवेदन + स्व-घोषणा एवं ट्रैकिंग पैक',
+        bestDescEn: 'Ensures proper annexure formatting and timely follow-up until certificate issue.',
+        bestDescHi: 'सही संलग्नक प्रारूप और प्रमाण पत्र निर्गत होने तक समय पर फॉलो-अप।',
+        fee: 150,
+        checklist: [
+          'Applicant Photo ID & Address Proof (.PDF)',
+          'Khatian / Family Lineage or Local Residence Proof (.PDF)',
+          'Signed Application / Self-Declaration Form (.PDF)'
+        ]
+      },
+      {
+        id: 5,
+        category: 'Registry & Legal',
+        titleEn: 'Legal Affidavits, Gap & Name Change',
+        titleHi: 'शपथ पत्र (Affidavit), गैप एवं नाम संशोधन',
+        descEn: 'Drafting and formatting affidavits for name variation, date of birth, gap certificate, or address.',
+        descHi: 'नाम भिन्नता, जन्म तिथि, गैप सर्टिफिकेट या पता हेतु शपथ पत्र प्रारूपण।',
+        bestServiceEn: 'Accurate Legal Drafting + Print & Verification Ready Pack',
+        bestServiceHi: 'सटीक कानूनी प्रारूपण + प्रिंट एवं सत्यापन तैयार पैक',
+        bestDescEn: 'Structured legal wording with clean print layout and ID cross-check.',
+        bestDescHi: 'स्पष्ट कानूनी प्रारूप और पहचान पत्र मिलान के साथ तैयार प्रति।',
+        fee: 250,
+        checklist: [
+          'Applicant ID Proof (.PDF)',
+          'Supporting Document Showing Name / Date / Fact (.PDF)'
+        ]
+      },
+      {
+        id: 6,
+        category: 'Citizen & Business',
+        titleEn: 'PAN Card, Passport & Business Licenses',
+        titleHi: 'पैन कार्ड, पासपोर्ट एवं व्यापार लाइसेंस',
+        descEn: 'New/correction PAN card, Passport Seva appointment filing, Udyam, FSSAI, and trade registrations.',
+        descHi: 'नया/संशोधन पैन कार्ड, पासपोर्ट सेवा आवेदन, उद्यम, FSSAI एवं व्यापार पंजीकरण।',
+        bestServiceEn: 'Error-Free Form Filing + Document Check + Slot Slip Pack',
+        bestServiceHi: 'त्रुटि-मुक्त फॉर्म आवेदन + दस्तावेज जांच + स्लॉट पर्ची पैक',
+        bestDescEn: 'Prevents name/DOB mismatches and provides complete acknowledgment slip.',
+        bestDescHi: 'नाम/जन्मतिथि त्रुटि से बचाव और पूर्ण पावती पर्ची।',
+        fee: 220,
+        checklist: [
+          'Identity & Date of Birth Proof (.PDF)',
+          'Address / Business Premise Proof (.PDF)'
+        ]
+      }
+    ];
+
+    const STORAGE_KEYS = {
+      APPS: 'pkr_2026_applications_v2',
+      CITIZEN: 'pkr_2026_citizen_session_v2',
+      STAFF_PIN: 'pkr_2026_staff_pin_v2',
+      LANG: 'pkr_2026_lang_v2'
+    };
+
+    let currentLang = localStorage.getItem(STORAGE_KEYS.LANG) || 'en';
+    let selectedCategory = 'All';
+    let activeServiceId = 1;
+    let uploadedPdfsBySlot = {}; // { [slotIndex]: { name, size, dataUrl, flaggedReason } }
+    let staffAuthenticated = false;
+    let staffTab = 'applications';
+    let staffStatusFilter = 'All';
+
+    function showToast(msg, type = 'info') {
+      const container = document.getElementById('toast-container');
+      const colors = {
+        info: 'bg-slate-900 text-white border-slate-700',
+        success: 'bg-emerald-900 text-emerald-50 border-emerald-700',
+        error: 'bg-rose-900 text-rose-50 border-rose-700',
+        warn: 'bg-amber-900 text-amber-50 border-amber-700'
+      };
+      const el = document.createElement('div');
+      el.className = `pointer-events-auto border px-4 py-3 rounded-xl shadow-xl text-xs sm:text-sm font-medium flex items-center justify-between gap-3 ${colors[type] || colors.info}`;
+      el.innerHTML = `<span>${msg}</span><button onclick="this.parentElement.remove()" class="text-white/70 hover:text-white">✕</button>`;
+      container.appendChild(el);
+      setTimeout(() => el.remove(), 4200);
+    }
+
+    function getApplications() { return []; }
+
+    function saveApplications(list) {
+      localStorage.setItem(STORAGE_KEYS.APPS, JSON.stringify(list));
+      syncToMongoDBApi(list);
+    }
+
+    async function syncToMongoDBApi() { /* MongoDB Atlas sync is implemented by enhancements.js. */ }
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'hi' : 'en';
+      localStorage.setItem(STORAGE_KEYS.LANG, currentLang);
+      document.getElementById('lang-label').textContent = currentLang === 'en' ? 'हिंदी में देखें' : 'English View';
+      renderCategories();
+      renderServices();
+      lucide.createIcons();
+      showToast(currentLang === 'hi' ? 'भाषा हिंदी में बदली गई' : 'Switched to English', 'info');
+    }
+
+    function toggleMobileMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+
+    function renderCategories() {
+      const cats = ['All', ...new Set(SERVICES.map(s => s.category))];
+      const container = document.getElementById('category-tabs');
+      container.innerHTML = cats.map(cat => {
+        const active = selectedCategory === cat;
+        return `<button onclick="selectCategory('${cat}')" class="px-3.5 py-1.5 rounded-full text-xs font-bold whitespace-nowrap transition ${
+          active ? 'bg-indigo-600 text-white shadow-sm' : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-100'
+        }">${cat}</button>`;
+      }).join('');
+    }
+
+    function selectCategory(cat) {
+      selectedCategory = cat;
+      renderCategories();
+      renderServices();
+    }
+
+    function renderServices() {
+      const list = selectedCategory === 'All'
+        ? SERVICES
+        : SERVICES.filter(s => s.category === selectedCategory);
+
+      const grid = document.getElementById('services-grid');
+      grid.innerHTML = list.map(s => {
+        const title = currentLang === 'hi' ? s.titleHi : s.titleEn;
+        const desc = currentLang === 'hi' ? s.descHi : s.descEn;
+        const bestName = currentLang === 'hi' ? s.bestServiceHi : s.bestServiceEn;
+        return `
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between gap-4">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-100">${s.category}</span>
+                <span class="text-sm font-extrabold text-slate-900">₹${s.fee}</span>
+              </div>
+              <h3 class="font-bold text-slate-900 text-lg leading-snug">${title}</h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">${desc}</p>
+
+              <div class="bg-emerald-50/80 border border-emerald-200/80 rounded-xl p-3">
+                <p class="text-[10px] font-bold uppercase tracking-wider text-emerald-800">Best Service Included</p>
+                <p class="text-xs font-bold text-slate-900 mt-0.5">${bestName}</p>
+              </div>
+
+              <div class="pt-1">
+                <p class="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">Required PDFs (${s.checklist.length})</p>
+                <ul class="space-y-1 text-xs text-slate-600">
+                  ${s.checklist.map(item => `<li class="flex items-start gap-1.5"><span class="text-indigo-600 font-bold">•</span><span>${item}</span></li>`).join('')}
+                </ul>
+              </div>
+            </div>
+
+            <button onclick="openApplyModal(${s.id})" class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm transition shadow-sm">
+              <i data-lucide="file-up" class="w-4 h-4"></i>
+              <span>${currentLang === 'hi' ? 'अभी आवेदन करें (Apply Now)' : 'Apply Now'}</span>
+            </button>
+          </div>
+        `;
+      }).join('');
+      lucide.createIcons();
+    }
+
+    function handleHeroSearch(query) {
+      const box = document.getElementById('hero-search-results');
+      const q = query.trim().toLowerCase();
+      if (!q) {
+        box.classList.add('hidden');
+        return;
+      }
+      const matches = SERVICES.filter(s =>
+        s.titleEn.toLowerCase().includes(q) ||
+        s.titleHi.toLowerCase().includes(q) ||
+        s.bestServiceEn.toLowerCase().includes(q) ||
+        s.category.toLowerCase().includes(q)
+      );
+      box.classList.remove('hidden');
+      if (!matches.length) {
+        box.innerHTML = `<div class="p-3 text-xs text-slate-400">No matching service found.</div>`;
+        return;
+      }
+      box.innerHTML = matches.map(m => `
+        <button type="button" onclick="openApplyModal(${m.id}); document.getElementById('hero-search-results').classList.add('hidden')"
+          class="w-full text-left p-3 hover:bg-indigo-900/50 flex items-center justify-between gap-2 transition">
+          <div>
+            <p class="text-xs font-bold text-white">${m.titleEn}</p>
+            <p class="text-[11px] text-emerald-300">Best: ${m.bestServiceEn}</p>
+          </div>
+          <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-indigo-600 text-white shrink-0">Apply Now</span>
+        </button>
+      `).join('');
+    }
+
+    function applyBestFromSearch() {
+      const q = document.getElementById('hero-search-input').value.trim().toLowerCase();
+      const match = SERVICES.find(s =>
+        s.titleEn.toLowerCase().includes(q) ||
+        s.titleHi.toLowerCase().includes(q) ||
+        s.bestServiceEn.toLowerCase().includes(q)
+      ) || SERVICES[0];
+      openApplyModal(match.id);
+    }
+
+    function openApplyModal(serviceId, prefillToken = null) {
+      activeServiceId = serviceId || 1;
+      uploadedPdfsBySlot = {};
+      const select = document.getElementById('apply-service-select');
+      select.innerHTML = SERVICES.map(s => `<option value="${s.id}" ${s.id === activeServiceId ? 'selected' : ''}>${s.titleEn} — ₹${s.fee}</option>`).join('');
+
+      const citizen = getCitizenSession();
+      if (citizen) {
+        document.getElementById('app-name').value = citizen.name || '';
+        document.getElementById('app-phone').value = citizen.phone || '';
+      }
+
+      onServiceChange(activeServiceId);
+      document.getElementById('apply-modal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeApplyModal() {
+      document.getElementById('apply-modal').classList.add('hidden');
+    }
+
+    function onServiceChange(id) {
+      activeServiceId = Number(id);
+      const service = SERVICES.find(s => s.id === activeServiceId) || SERVICES[0];
+      uploadedPdfsBySlot = {};
+
+      document.getElementById('best-service-name').textContent = currentLang === 'hi' ? service.bestServiceHi : service.bestServiceEn;
+      document.getElementById('best-service-desc').textContent = currentLang === 'hi' ? service.bestDescHi : service.bestDescEn;
+      document.getElementById('best-service-fee').textContent = `₹${service.fee}`;
+      document.getElementById('upi-amount-display').textContent = `₹${service.fee}`;
+
+      updateUpiQrCode(service.fee, service.titleEn);
+      renderChecklistSlots(service.checklist);
+    }
+
+    function updateUpiQrCode(amount, note) {
+      const upiUri = `upi://pay?pa=${encodeURIComponent(UPI_CONFIG.upiId)}&pn=${encodeURIComponent(UPI_CONFIG.payeeName)}&am=${encodeURIComponent(amount)}&cu=INR&tn=${encodeURIComponent(note)}`;
+      const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(upiUri)}`;
+      document.getElementById('upi-qr-img').src = qrUrl;
+      document.getElementById('upi-id-text').textContent = UPI_CONFIG.upiId;
+      document.getElementById('upi-payee-label').textContent = UPI_CONFIG.payeeName;
+    }
+
+    function copyUpiId() {
+      navigator.clipboard?.writeText(UPI_CONFIG.upiId);
+      showToast(`Copied UPI ID: ${UPI_CONFIG.upiId}`, 'success');
+    }
+
+    function renderChecklistSlots(checklist) {
+      const container = document.getElementById('checklist-pdf-slots');
+      container.innerHTML = checklist.map((docLabel, idx) => {
+        const fileObj = uploadedPdfsBySlot[idx];
+        return `
+          <div class="border ${fileObj ? 'border-emerald-300 bg-emerald-50/40' : 'border-slate-200 bg-white'} rounded-xl p-3.5 space-y-2">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <label class="text-xs sm:text-sm font-bold text-slate-800 flex items-center gap-1.5">
+                <span class="w-5 h-5 rounded-full ${fileObj ? 'bg-emerald-600 text-white' : 'bg-slate-200 text-slate-700'} text-[11px] inline-flex items-center justify-center font-bold">${idx + 1}</span>
+                <span>${docLabel} *</span>
+              </label>
+              <input type="file" accept=".pdf,application/pdf" onchange="handleSlotPdfUpload(event, ${idx}, '${docLabel.replace(/'/g, "\'")}')"
+                class="text-xs file:mr-3 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100" />
+            </div>
+            <div id="slot-preview-${idx}"></div>
+          </div>
+        `;
+      }).join('');
+      updatePdfReadiness(checklist.length);
+    }
+
+    function handleSlotPdfUpload(event, slotIndex, docLabel) {
+      const file = event.target.files?.[0];
+      if (!file) return;
+
+      const isPdfName = file.name.toLowerCase().endsWith('.pdf');
+      const isPdfMime = file.type === 'application/pdf' || file.type === '';
+      if (!isPdfName || !isPdfMime) {
+        event.target.value = '';
+        delete uploadedPdfsBySlot[slotIndex];
+        renderSlotPreview(slotIndex, null);
+        updatePdfReadiness((SERVICES.find(s => s.id === activeServiceId)?.checklist || []).length);
+        showToast('Only .PDF files are allowed for each checklist item.', 'error');
+        return;
+      }
+
+      if (file.size > 10 * 1024 * 1024) {
+        event.target.value = '';
+        delete uploadedPdfsBySlot[slotIndex];
+        renderSlotPreview(slotIndex, null);
+        updatePdfReadiness((SERVICES.find(s => s.id === activeServiceId)?.checklist || []).length);
+        showToast('PDF exceeds 10 MB limit. Please compress and re-upload.', 'error');
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = () => {
+        const dataUrl = reader.result;
+        // Verify %PDF header signature from base64
+        try {
+          const base64Part = String(dataUrl).split(',')[1] || '';
+          const headerBytes = atob(base64Part.slice(0, 12));
+          if (!headerBytes.startsWith('%PDF-')) {
+            event.target.value = '';
+            delete uploadedPdfsBySlot[slotIndex];
+            renderSlotPreview(slotIndex, null);
+            showToast('Invalid or corrupted PDF header (%PDF- missing).', 'error');
+            return;
+          }
+        } catch (e) {}
+
+        uploadedPdfsBySlot[slotIndex] = {
+          slotIndex,
+          docName: docLabel,
+          fileName: file.name,
+          sizeKB: Math.max(1, Math.round(file.size / 1024)),
+          dataUrl
+        };
+        renderSlotPreview(slotIndex, uploadedPdfsBySlot[slotIndex]);
+        const service = SERVICES.find(s => s.id === activeServiceId);
+        updatePdfReadiness(service ? service.checklist.length : 0);
+        showToast(`Attached ${file.name} for item #${slotIndex + 1}`, 'success');
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function renderSlotPreview(slotIndex, info) {
+      const el = document.getElementById(`slot-preview-${slotIndex}`);
+      if (!el) return;
+      if (!info) {
+        el.innerHTML = '';
+        return;
+      }
+      el.innerHTML = `
+        <div class="flex flex-wrap items-center justify-between gap-2 bg-white border border-emerald-200 rounded-lg px-3 py-2 text-xs">
+          <span class="font-semibold text-emerald-800">✓ ${info.fileName} (${info.sizeKB} KB)</span>
+          <a href="${info.dataUrl}" target="_blank" rel="noopener" class="text-indigo-600 font-semibold hover:underline">Preview PDF</a>
+        </div>
+      `;
+    }
+
+    function updatePdfReadiness(totalCount) {
+      const readyCount = Object.keys(uploadedPdfsBySlot).length;
+      const pct = totalCount > 0 ? Math.round((readyCount / totalCount) * 100) : 0;
+      document.getElementById('pdf-readiness-counter').textContent = `${readyCount} / ${totalCount} PDFs Ready`;
+      document.getElementById('pdf-readiness-bar').style.width = `${pct}%`;
+      const alertBox = document.getElementById('pdf-validation-alert');
+      if (readyCount === totalCount && totalCount > 0) {
+        alertBox.classList.add('hidden');
+      }
+    }
+
+    function handleApplicationSubmit(event) {
+      event.preventDefault();
+      const service = SERVICES.find(s => s.id === activeServiceId) || SERVICES[0];
+      const missingItems = [];
+
+      service.checklist.forEach((docLabel, idx) => {
+        if (!uploadedPdfsBySlot[idx]) {
+          missingItems.push(`#${idx + 1}: ${docLabel}`);
+        }
+      });
+
+      const alertBox = document.getElementById('pdf-validation-alert');
+      if (missingItems.length > 0) {
+        alertBox.classList.remove('hidden');
+        alertBox.innerHTML = `Please upload a valid .PDF file for every required checklist item before submitting:<br>• ${missingItems.join('<br>• ')}`;
+        showToast('Every checklist item requires a .PDF upload.', 'error');
+        return;
+      }
+      alertBox.classList.add('hidden');
+
+      const token = `PKR-2026-${Math.floor(1000 + Math.random() * 9000)}`;
+      const record = {
+        token,
+        serviceId: service.id,
+        serviceTitle: service.titleEn,
+        bestService: currentLang === 'hi' ? service.bestServiceHi : service.bestServiceEn,
+        fee: service.fee,
+        applicantName: document.getElementById('app-name').value.trim(),
+        phone: document.getElementById('app-phone').value.trim(),
+        anchal: document.getElementById('app-anchal').value.trim() || 'Ranchi Counter',
+        utr: document.getElementById('app-utr').value.trim().toUpperCase(),
+        utrVerified: false,
+        status: 'Pending',
+        createdAt: new Date().toLocaleString('en-IN', { hour12: true }),
+        pdfs: service.checklist.map((_, idx) => ({
+          ...uploadedPdfsBySlot[idx],
+          flagged: false,
+          flagNote: ''
+        }))
+      };
+
+      const apps = getApplications();
+      apps.unshift(record);
+      saveApplications(apps);
+
+      closeApplyModal();
+      openTokenReceipt(record);
+      showToast(`Application submitted! Token: ${token}`, 'success');
+    }
+
+    let latestSlipRecord = null;
+    function openTokenReceipt(record) {
+      latestSlipRecord = record;
+      document.getElementById('slip-token-id').textContent = record.token;
+      document.getElementById('slip-details').innerHTML = `
+        <p><strong>Applicant:</strong> ${record.applicantName} (${record.phone})</p>
+        <p><strong>Service:</strong> ${record.serviceTitle}</p>
+        <p><strong>Best Service Applied:</strong> ${record.bestService}</p>
+        <p><strong>Anchal / Area:</strong> ${record.anchal}</p>
+        <p><strong>Fee & UTR:</strong> ₹${record.fee} • UTR: <span class="font-mono">${record.utr}</span></p>
+        <p><strong>PDFs Attached:</strong> ${record.pdfs.length} verified .PDF files</p>
+        <p><strong>Status:</strong> <span class="font-bold text-indigo-700">${record.status}</span></p>
+      `;
+      document.getElementById('token-modal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeTokenModal() {
+      document.getElementById('token-modal').classList.add('hidden');
+    }
+
+    function copyTokenSummary() {
+      if (!latestSlipRecord) return;
+      const r = latestSlipRecord;
+      const text = `Pragya Kendra Ranchi Token: ${r.token}
+Service: ${r.serviceTitle}
+Best Service: ${r.bestService}
+UTR: ${r.utr}
+Status: ${r.status}`;
+      navigator.clipboard?.writeText(text);
+      showToast('Token summary copied to clipboard!', 'success');
+    }
+
+    function handleStatusLookup(event) {
+      event.preventDefault();
+      const query = document.getElementById('status-lookup-input').value.trim().toLowerCase();
+      const apps = getApplications();
+      const matches = apps.filter(a => a.token.toLowerCase().includes(query) || a.phone.includes(query));
+      renderStatusCards(matches, 'status-lookup-result');
+    }
+
+    function renderStatusCards(list, targetId) {
+      const box = document.getElementById(targetId);
+      if (!list.length) {
+        box.innerHTML = `<div class="p-4 rounded-xl bg-amber-50 border border-amber-200 text-xs sm:text-sm text-amber-900">No application found for that Token ID or Mobile Number.</div>`;
+        return;
+      }
+      box.innerHTML = list.map(app => {
+        const flaggedPdfs = (app.pdfs || []).filter(p => p.flagged);
+        return `
+          <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 space-y-3 shadow-sm">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <span class="font-mono font-extrabold text-indigo-700 text-sm">${app.token}</span>
+                <span class="text-xs text-slate-400 ml-2">${app.createdAt}</span>
+                <h4 class="font-bold text-slate-900 text-base">${app.serviceTitle}</h4>
+                <p class="text-xs text-emerald-700 font-semibold">Best Service: ${app.bestService}</p>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-700 border border-indigo-200">${app.status}</span>
+            </div>
+
+            <div class="text-xs text-slate-600 flex flex-wrap gap-4">
+              <span><strong>Applicant:</strong> ${app.applicantName}</span>
+              <span><strong>UTR:</strong> <span class="font-mono">${app.utr}</span> (${app.utrVerified ? '✓ Verified' : 'Pending Verification'})</span>
+              <span><strong>PDFs:</strong> ${app.pdfs.length} attached</span>
+            </div>
+
+            ${flaggedPdfs.length ? `
+              <div class="bg-rose-50 border border-rose-200 rounded-xl p-3 space-y-2">
+                <p class="text-xs font-bold text-rose-800">Action Required — Re-upload Flagged PDF(s):</p>
+                ${flaggedPdfs.map(fp => `
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+                    <span class="text-rose-900"><strong>${fp.docName}:</strong> ${fp.flagNote || 'Please re-upload clear PDF'}</span>
+                    <input type="file" accept=".pdf,application/pdf" onchange="reuploadFlaggedPdf(event, '${app.token}', ${fp.slotIndex})" class="text-[11px]" />
+                  </div>
+                `).join('')}
+              </div>
+            ` : ''}
+          </div>
+        `;
+      }).join('');
+    }
+
+    function reuploadFlaggedPdf(event, token, slotIndex) {
+      const file = event.target.files?.[0];
+      if (!file || !file.name.toLowerCase().endsWith('.pdf')) {
+        showToast('Please select a valid .PDF file.', 'error');
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = () => {
+        const apps = getApplications();
+        const app = apps.find(a => a.token === token);
+        if (!app) return;
+        const targetPdf = app.pdfs.find(p => p.slotIndex === slotIndex);
+        if (targetPdf) {
+          targetPdf.fileName = file.name;
+          targetPdf.sizeKB = Math.max(1, Math.round(file.size / 1024));
+          targetPdf.dataUrl = reader.result;
+          targetPdf.flagged = false;
+          targetPdf.flagNote = '';
+          saveApplications(apps);
+          showToast(`Re-uploaded ${file.name} for ${token}`, 'success');
+          handleStatusLookup({ preventDefault: () => {} });
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+
+    // Citizen Session & Portal
+    function getCitizenSession() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEYS.CITIZEN) || 'null');
+      } catch (e) { return null; }
+    }
+
+    function openCitizenModal() {
+      document.getElementById('citizen-modal').classList.remove('hidden');
+      renderCitizenModal();
+      lucide.createIcons();
+    }
+
+    function closeCitizenModal() {
+      document.getElementById('citizen-modal').classList.add('hidden');
+    }
+
+    function renderCitizenModal() {
+      const body = document.getElementById('citizen-modal-body');
+      const session = getCitizenSession();
+      if (!session) {
+        body.innerHTML = `
+          <form onsubmit="handleCitizenLogin(event)" class="space-y-4">
+            <p class="text-sm text-slate-600">Sign in with your Name and 10-digit Mobile Number to auto-fill applications and view all your submitted tokens in one place.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name *</label>
+                <input id="cit-name" type="text" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm" placeholder="Your Name" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">10-Digit Mobile Number *</label>
+                <input id="cit-phone" type="tel" required pattern="[6-9][0-9]{9}" maxlength="10" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm" placeholder="10-digit mobile number" />
+              </div>
+            </div>
+            <button type="submit" class="px-5 py-2.5 rounded-xl bg-sky-700 hover:bg-sky-800 text-white font-bold text-sm">Continue to Citizen Portal</button>
+          </form>
+        `;
+        return;
+      }
+
+      document.getElementById('citizen-nav-label').textContent = session.name.split(' ')[0];
+      const myApps = getApplications().filter(a => a.phone === session.phone);
+      body.innerHTML = `
+        <div class="flex flex-wrap items-center justify-between gap-3 bg-sky-50 border border-sky-200 rounded-xl p-4">
+          <div>
+            <p class="font-bold text-slate-900">${session.name}</p>
+            <p class="text-xs text-slate-600">Mobile: ${session.phone} • ${myApps.length} Application(s)</p>
+          </div>
+          <div class="flex gap-2">
+            <button onclick="closeCitizenModal(); openApplyModal(1)" class="px-3.5 py-2 rounded-xl bg-indigo-600 text-white text-xs font-bold">+ New Application</button>
+            <button onclick="logoutCitizen()" class="px-3.5 py-2 rounded-xl border border-slate-300 bg-white text-slate-700 text-xs font-semibold">Logout</button>
+          </div>
+        </div>
+        <div id="citizen-apps-list" class="space-y-3"></div>
+      `;
+      renderStatusCards(myApps, 'citizen-apps-list');
+    }
+
+    function handleCitizenLogin(e) {
+      e.preventDefault();
+      const name = document.getElementById('cit-name').value.trim();
+      const phone = document.getElementById('cit-phone').value.trim();
+      localStorage.setItem(STORAGE_KEYS.CITIZEN, JSON.stringify({ name, phone }));
+      document.getElementById('citizen-nav-label').textContent = name.split(' ')[0];
+      showToast(`Welcome, ${name}!`, 'success');
+      renderCitizenModal();
+    }
+
+    function logoutCitizen() {
+      localStorage.removeItem(STORAGE_KEYS.CITIZEN);
+      document.getElementById('citizen-nav-label').textContent = 'Citizen Login';
+      renderCitizenModal();
+    }
+
+    // Staff & Admin Console
+    function getStaffPin() { return ''; }
+
+    function openStaffModal() {
+      document.getElementById('staff-modal').classList.remove('hidden');
+      renderStaffConsole();
+      lucide.createIcons();
+    }
+
+    function closeStaffModal() {
+      document.getElementById('staff-modal').classList.add('hidden');
+    }
+
+    function renderStaffConsole() { /* Secure MongoDB-backed console is supplied by enhancements.js. */ }
+    function handleStaffLogin(e) { e.preventDefault(); }
+
+    // Calculators
+    function calculateLandArea() {
+      const val = parseFloat(document.getElementById('land-input-val').value) || 0;
+      const unit = document.getElementById('land-input-unit').value;
+      // Base in sq.ft: 1 Katha = 720 sq.ft, 1 Decimal = 435.6 sq.ft, 1 Sq.Meter = 10.7639 sq.ft, 1 Acre = 43560 sq.ft
+      let sqFt = 0;
+      if (unit === 'katha') sqFt = val * 720;
+      else if (unit === 'decimal') sqFt = val * 435.6;
+      else if (unit === 'sqft') sqFt = val;
+      else if (unit === 'sqm') sqFt = val * 10.7639104;
+      else if (unit === 'acre') sqFt = val * 43560;
+
+      const katha = sqFt / 720;
+      const decimal = sqFt / 435.6;
+      const sqMeter = sqFt / 10.7639104;
+      const acre = sqFt / 43560;
+
+      const cards = [
+        { label: 'Katha (कट्ठा)', value: katha.toFixed(3) },
+        { label: 'Decimal (डिसमिल)', value: decimal.toFixed(3) },
+        { label: 'Sq. Feet', value: sqFt.toFixed(1) },
+        { label: 'Sq. Meter', value: sqMeter.toFixed(2) },
+        { label: 'Acre (एकड़)', value: acre.toFixed(4) }
+      ];
+
+      document.getElementById('land-conversion-grid').innerHTML = cards.map(c => `
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-3">
+          <p class="text-[11px] font-semibold text-slate-500">${c.label}</p>
+          <p class="text-sm font-extrabold text-slate-900 mt-0.5">${c.value}</p>
+        </div>
+      `).join('');
+    }
+
+    function calculateRegistryFee() {
+      const circle = parseFloat(document.getElementById('reg-circle-val').value) || 0;
+      const agree = parseFloat(document.getElementById('reg-agree-val').value) || 0;
+      const chargeable = Math.max(circle, agree);
+      const stampDuty = Math.round(chargeable * 0.04);
+      const regFee = Math.round(chargeable * 0.03);
+      const total = stampDuty + regFee;
+
+      document.getElementById('registry-fee-output').innerHTML = `
+        <div class="flex justify-between"><span class="text-slate-600">Higher Valuation Base:</span><span class="font-bold text-slate-900">₹${chargeable.toLocaleString('en-IN')}</span></div>
+        <div class="flex justify-between"><span class="text-slate-600">Stamp Duty (4%):</span><span class="font-semibold text-slate-800">₹${stampDuty.toLocaleString('en-IN')}</span></div>
+        <div class="flex justify-between"><span class="text-slate-600">Registration Fee (3%):</span><span class="font-semibold text-slate-800">₹${regFee.toLocaleString('en-IN')}</span></div>
+        <div class="flex justify-between border-t border-slate-200 pt-2 text-base"><span class="font-extrabold text-slate-900">Estimated Total (7%):</span><span class="font-extrabold text-indigo-700">₹${total.toLocaleString('en-IN')}</span></div>
+      `;
+    }
+
+    // Floating WhatsApp
+    function toggleWhatsAppPanel() {
+      const panel = document.getElementById('wa-panel');
+      panel.classList.toggle('hidden');
+      if (!panel.classList.contains('hidden')) {
+        applyWaTemplate();
+      }
+      lucide.createIcons();
+    }
+
+    function applyWaTemplate() {
+      const tpl = document.getElementById('wa-template-select').value;
+      const templates = {
+        mutation: 'Namaste Pragya Kendra Ranchi (Kutchery Chowk), I need help with Jharbhoomi Land Mutation (दाखिल-खारिज) & Lagaan PDF checklist.',
+        registry: 'Namaste Pragya Kendra Ranchi, please guide me on Kutchery Registry, deed drafting & stamp duty calculation.',
+        jharsewa: 'Namaste Pragya Kendra Ranchi, I want to apply for a JharSewa Certificate (Caste / Residential / Income) with PDF checklist.',
+        status: 'Namaste Pragya Kendra Ranchi, please share an update on my application status & UTR payment verification.'
+      };
+      document.getElementById('wa-message-box').value = templates[tpl] || templates.mutation;
+      updateWaPreview();
+    }
+
+    function updateWaPreview() {
+      const phone = document.getElementById('wa-number-select').value;
+      const msg = document.getElementById('wa-message-box').value;
+      document.getElementById('wa-launch-link').href = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('wa-message-box').addEventListener('input', updateWaPreview);
+      if (currentLang === 'hi') {
+        document.getElementById('lang-label').textContent = 'English View';
+      }
+      const citizen = getCitizenSession();
+      if (citizen?.name) {
+        document.getElementById('citizen-nav-label').textContent = citizen.name.split(' ')[0];
+      }
+      renderCategories();
+      renderServices();
+      calculateLandArea();
+      calculateRegistryFee();
+      syncToMongoDBApi(getApplications());
+      lucide.createIcons();
+    });
+  </script>
+  <script src="./config.js"></script>
+  <script src="./service-catalog.js"></script>
+  <script src="./enhancements.js"></script>
+</body>
+</html>

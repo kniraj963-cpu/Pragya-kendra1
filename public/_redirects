@@ -1,0 +1,4 @@
+# Cloudflare Pages SPA fallback & optional API proxy placeholder
+# Replace https://your-api-origin.example.com when connecting a separate Express + MongoDB host
+# /api/*  https://your-api-origin.example.com/api/:splat  200
+/*  /index.html  200

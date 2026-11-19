@@ -1,0 +1,6 @@
+{
+  "name": "Pragya Kendra Ranchi",
+  "description": "Responsive portfolio and MongoDB-backed project metadata & inquiry portal for Pragya Kendra at Kutchery Chowk, Ranchi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
