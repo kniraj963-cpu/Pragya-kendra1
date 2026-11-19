@@ -34,3 +34,19 @@ Digital citizen service portal for **Pragya Kendra Ranchi** (*Beside Kolkatta Ph
 1. Install dependencies:
    ```bash
    npm install
+   ```
+
+## Publishing and Android app
+
+- Pushing to `main` builds and publishes the static site to GitHub Pages at
+  `https://kniraj963-cpu.github.io/Pragya-kendra1/`. The repository's Express
+  API and Cloudflare Pages Functions are not deployed there; server-backed
+  operations require a separately hosted API.
+- The same workflow builds a sideloadable **debug APK**. Download
+  `pragya-kendra-debug-apk` from the workflow run's Artifacts section. This is
+  for testing/sideloading and is not a Play Store release. Like the hosted
+  static site, it needs a separately hosted API for server-backed operations.
+- To build the APK locally, install the Android SDK and run:
+  ```bash
+  npm run android:apk
+  ```
